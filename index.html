@@ -14,7 +14,7 @@
       color-scheme: light;
       color: #263640;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.65;
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@
     #academic-homepage .academic-name {
       color: #ffffff;
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: 28px;
+      font-size: 36px;
       font-weight: 400;
       line-height: 1.3;
       text-decoration: none;
@@ -61,7 +61,7 @@
       display: inline-flex;
       align-items: center;
       min-height: 44px;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
       text-decoration: none;
       white-space: nowrap;
@@ -80,39 +80,41 @@
     }
     #academic-homepage .academic-home {
       display: grid;
-      grid-template-columns: 240px minmax(0, 1fr);
+      grid-template-columns: 333px minmax(0, 1fr);
       gap: 42px;
       align-items: start;
     }
     #academic-homepage .academic-photo {
-      width: 190px;
+      width: 333px;
       max-width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
     #academic-homepage h1 {
       margin: 0 0 12px;
       font-family: Georgia, 'Times New Roman', serif;
       color: #1d303c;
-      font-size: 34px;
+      font-size: 40px;
       font-weight: 400;
       line-height: 1.25;
     }
     #academic-homepage .academic-affiliation {
       margin: 0;
+      font: inherit;
       color: #405969;
     }
     #academic-homepage .academic-biography {
       min-width: 0;
       margin: 0;
       color: #40515d;
-      line-height: 1.8;
+      line-height: 1.65;
     }
-    #academic-homepage .academic-biography p { margin: 0; }
-    #academic-homepage .academic-biography p + p { margin-top: 18px; }
+    #academic-homepage .academic-biography p { margin: 0; font: inherit; }
+    #academic-homepage .academic-biography p + p { margin-top: 24px; }
     #academic-homepage .academic-page p {
       margin: 16px 0 0;
+      font: inherit;
       color: #40515d;
     }
     #academic-homepage .academic-footer {
@@ -126,7 +128,7 @@
       flex-wrap: wrap;
       gap: 4px 38px;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 960px) {
       #academic-homepage .academic-home {
         grid-template-columns: minmax(0, 1fr);
         gap: 32px;
@@ -140,12 +142,8 @@
         gap: 4px;
       }
       #academic-homepage .academic-navigation { gap: 0 22px; }
-      #academic-homepage .academic-navigation a { font-size: 15px; }
       #academic-homepage .academic-main { padding: 34px 22px 42px; }
-      #academic-homepage .academic-photo { width: 170px; height: auto; }
-      #academic-homepage h1 { font-size: 30px; }
       #academic-homepage .academic-footer-inner { gap: 0 24px; }
-      #academic-homepage .academic-footer-link { font-size: 15px; }
     }
   
   </style>
