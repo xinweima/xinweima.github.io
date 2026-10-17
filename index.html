@@ -30,8 +30,7 @@
       color: #ffffff;
     }
     #academic-homepage .academic-header-inner {
-      max-width: 960px;
-      margin: 0 auto;
+      width: 100%;
       padding: 18px 36px;
       display: flex;
       align-items: center;
@@ -76,21 +75,21 @@
     }
     #academic-homepage .academic-main {
       width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
       padding: 54px 36px 64px;
       flex: 1;
     }
     #academic-homepage .academic-home {
       display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
+      grid-template-columns: 240px minmax(0, 1fr);
       gap: 42px;
       align-items: start;
     }
     #academic-homepage .academic-photo {
       width: 190px;
+      max-width: 100%;
       height: auto;
       display: block;
+      margin-bottom: 18px;
     }
     #academic-homepage h1 {
       margin: 0 0 12px;
@@ -101,11 +100,11 @@
       line-height: 1.25;
     }
     #academic-homepage .academic-affiliation {
-      margin: 0 0 26px;
+      margin: 0;
       color: #405969;
     }
     #academic-homepage .academic-biography {
-      max-width: 570px;
+      min-width: 0;
       margin: 0;
       color: #40515d;
       line-height: 1.8;
@@ -127,6 +126,12 @@
       flex-wrap: wrap;
       gap: 4px 38px;
     }
+    @media (max-width: 800px) {
+      #academic-homepage .academic-home {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+    }
     @media (max-width: 600px) {
       #academic-homepage .academic-header-inner {
         padding: 16px 22px;
@@ -137,7 +142,6 @@
       #academic-homepage .academic-navigation { gap: 0 22px; }
       #academic-homepage .academic-navigation a { font-size: 15px; }
       #academic-homepage .academic-main { padding: 34px 22px 42px; }
-      #academic-homepage .academic-home { grid-template-columns: 1fr; gap: 26px; }
       #academic-homepage .academic-photo { width: 170px; height: auto; }
       #academic-homepage h1 { font-size: 30px; }
       #academic-homepage .academic-footer-inner { gap: 0 24px; }
@@ -163,14 +167,14 @@
 
   <main class="academic-main" aria-live="polite">
     <section class="academic-home" id="home" data-panel="home" aria-label="Homepage">
-      <img class="academic-photo" src="./XinweiMa-Photo.jpg" alt="Xinwei Ma" width="576" height="768">
-      <div>
+      <div class="academic-profile">
+        <img class="academic-photo" src="./XinweiMa-Photo.jpg" alt="Xinwei Ma" width="576" height="768">
         <h1>Xinwei Ma</h1>
         <p class="academic-affiliation">Associate Professor of Economics<br>University of California San Diego</p>
-        <div class="academic-biography">
-          <p>Xinwei Ma is an Associate Professor of Economics at the University of California San Diego. His interdisciplinary research focuses on developing robust statistical methods for causal inference and program evaluation in economics, the social sciences, and biomedical applications.</p>
-          <p>Xinwei earned his Ph.D. in Economics from the University of Michigan in 2019. He previously received a Master of Finance from the University of Hong Kong and a Master of Economics and a Bachelor of Science from Peking University. He serves as an Associate Editor for <em>Econometric Theory</em>, the <em>Journal of Econometrics</em>, and <em>The Econometrics Journal</em>.</p>
-        </div>
+      </div>
+      <div class="academic-biography">
+        <p>Xinwei Ma is an Associate Professor of Economics at the University of California San Diego. His interdisciplinary research focuses on developing robust statistical methods for causal inference and program evaluation in economics, the social sciences, and biomedical applications.</p>
+        <p>Xinwei earned his Ph.D. in Economics from the University of Michigan in 2019. He previously received a Master of Finance from the University of Hong Kong and a Master of Economics and a Bachelor of Science from Peking University. He serves as an Associate Editor for <em>Econometric Theory</em>, the <em>Journal of Econometrics</em>, and <em>The Econometrics Journal</em>.</p>
       </div>
     </section>
     <section class="academic-page" id="research" data-panel="research" aria-label="Research page" hidden>
