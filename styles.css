@@ -210,6 +210,11 @@ body { margin: 0; background-color: #ffffff; }
   color: #40515d;
   font: inherit;
 }
+#academic-homepage .academic-research .academic-journal-name {
+  color: var(--academic-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
 #academic-homepage .academic-paper-links {
   display: flex;
   flex-wrap: wrap;
@@ -219,6 +224,10 @@ body { margin: 0; background-color: #ffffff; }
 }
 
 /* Teaching page */
+#academic-homepage.academic-teaching-site,
+#academic-homepage.academic-teaching-site * {
+  font-weight: 400;
+}
 #academic-homepage .academic-teaching-section {
   margin-top: 40px;
 }
@@ -228,10 +237,17 @@ body { margin: 0; background-color: #ffffff; }
   font: inherit;
   font-weight: 400;
 }
+#academic-homepage .academic-teaching-year-section {
+  margin-top: 40px;
+}
+#academic-homepage .academic-teaching-year-section + .academic-teaching-year-section {
+  margin-top: 64px;
+}
 #academic-homepage .academic-teaching-year {
-  margin: 0 0 42px;
-  color: #40515d;
+  margin: 0 0 28px;
+  color: var(--academic-blue);
   font: inherit;
+  font-weight: 400;
 }
 #academic-homepage .academic-course-list {
   margin: 0;
@@ -245,4 +261,8 @@ body { margin: 0; background-color: #ffffff; }
   margin: 0;
   font: inherit;
   font-weight: 400;
+}
+#academic-homepage .academic-course-terms {
+  color: #40515d;
+  font: inherit;
 }
