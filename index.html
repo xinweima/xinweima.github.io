@@ -14,7 +14,7 @@
       color-scheme: light;
       color: #263640;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 1.65;
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@
     #academic-homepage .academic-name {
       color: #ffffff;
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: 36px;
+      font-size: 44px;
       font-weight: 400;
       line-height: 1.3;
       text-decoration: none;
@@ -61,7 +61,7 @@
       display: inline-flex;
       align-items: center;
       min-height: 44px;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
       text-decoration: none;
       white-space: nowrap;
@@ -80,22 +80,32 @@
     }
     #academic-homepage .academic-home {
       display: grid;
-      grid-template-columns: 333px minmax(0, 1fr);
+      grid-template-columns: 500px minmax(0, 1fr);
       gap: 42px;
       align-items: start;
     }
+    #academic-homepage .academic-profile {
+      width: 100%;
+      max-width: 500px;
+      min-width: 0;
+      justify-self: start;
+    }
+    #academic-homepage .academic-profile h1,
+    #academic-homepage .academic-profile .academic-affiliation {
+      text-align: center;
+    }
     #academic-homepage .academic-photo {
-      width: 333px;
+      width: 500px;
       max-width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 24px;
+      margin: 0 auto 24px;
     }
     #academic-homepage h1 {
       margin: 0 0 12px;
       font-family: Georgia, 'Times New Roman', serif;
       color: #1d303c;
-      font-size: 40px;
+      font-size: 48px;
       font-weight: 400;
       line-height: 1.25;
     }
@@ -128,7 +138,7 @@
       flex-wrap: wrap;
       gap: 4px 38px;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 1100px) {
       #academic-homepage .academic-home {
         grid-template-columns: minmax(0, 1fr);
         gap: 32px;
