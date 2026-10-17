@@ -17,7 +17,7 @@
       <nav class="academic-navigation" aria-label="Main navigation">
         <a href="./research.html">Research</a>
         <a href="./index.html#software" data-page="software">Software</a>
-        <a href="./index.html#teaching" data-page="teaching">Teaching</a>
+        <a href="./teaching.html">Teaching</a>
       </nav>
     </div>
   </header>
@@ -44,10 +44,6 @@
       <h1>Software</h1>
       <p>Software projects and links will be added soon.</p>
     </section>
-    <section class="academic-page" id="teaching" data-panel="teaching" aria-label="Teaching page" hidden>
-      <h1>Teaching</h1>
-      <p>Courses and teaching materials will be added soon.</p>
-    </section>
   </main>
 
   <footer class="academic-footer">
@@ -63,12 +59,12 @@
     const root = document.getElementById('academic-homepage');
     const links = Array.from(root.querySelectorAll('a[data-page]'));
     const panels = Array.from(root.querySelectorAll('[data-panel]'));
-    const titles = { home: 'Home', software: 'Software', teaching: 'Teaching' };
+    const titles = { home: 'Home', software: 'Software' };
 
     function showPage() {
       const requested = window.location.hash.slice(1);
-      if (requested === 'research') {
-        window.location.replace('./research.html');
+      if (requested === 'research' || requested === 'teaching') {
+        window.location.replace('./' + requested + '.html');
         return;
       }
       const page = Object.prototype.hasOwnProperty.call(titles, requested) ? requested : 'home';
