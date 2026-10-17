@@ -35,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px 32px;
+      gap: 24px 64px;
       flex-wrap: wrap;
     }
     #academic-homepage .academic-name {
@@ -53,7 +53,7 @@
     #academic-homepage .academic-navigation {
       display: flex;
       align-items: center;
-      gap: 8px 28px;
+      gap: 16px 56px;
       flex-wrap: wrap;
     }
     #academic-homepage .academic-navigation a,
@@ -110,8 +110,19 @@
       font-weight: 400;
       line-height: 1.25;
     }
+    #academic-homepage .academic-email {
+      margin: 0 0 1.65em;
+      font: inherit;
+    }
+    #academic-homepage .academic-email a {
+      color: var(--academic-blue);
+      font: inherit;
+      overflow-wrap: anywhere;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
     #academic-homepage .academic-affiliation {
-      margin: 0 0 32px;
+      margin: 0 0 calc(32px + 1.65em);
       font: inherit;
       color: #405969;
     }
@@ -137,7 +148,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 4px 38px;
+      gap: 8px 76px;
     }
     @media (max-width: 1350px) {
       #academic-homepage .academic-home {
@@ -150,11 +161,11 @@
         padding: 16px 22px;
         align-items: flex-start;
         flex-direction: column;
-        gap: 4px;
+        gap: 8px;
       }
-      #academic-homepage .academic-navigation { gap: 0 22px; }
+      #academic-homepage .academic-navigation { gap: 0 44px; }
       #academic-homepage .academic-main { padding: 34px 22px 42px; }
-      #academic-homepage .academic-footer-inner { gap: 0 24px; }
+      #academic-homepage .academic-footer-inner { gap: 0 48px; }
     }
   
   </style>
@@ -181,6 +192,10 @@
       </div>
       <div class="academic-introduction">
         <h1>Xinwei Ma</h1>
+        <p class="academic-email">
+          <a href="mailto:ma.xinwei@icloud.com">ma.xinwei@icloud.com</a><br>
+          <a href="https://xinweima.github.io/XinweiMa-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Xinwei Ma curriculum vitae, PDF, opens in a new tab">Curriculum Vitae</a>
+        </p>
         <p class="academic-affiliation">Associate Professor of Economics<br>University of California San Diego</p>
         <div class="academic-biography">
           <p>Xinwei Ma is an Associate Professor of Economics at the University of California San Diego. His interdisciplinary research focuses on developing robust statistical methods for causal inference and program evaluation in economics, the social sciences, and biomedical applications.</p>
