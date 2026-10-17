@@ -14,7 +14,7 @@
       color-scheme: light;
       color: #263640;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 24px;
+      font-size: 30px;
       line-height: 1.65;
       display: flex;
       flex-direction: column;
@@ -41,13 +41,14 @@
     #academic-homepage .academic-name {
       color: #ffffff;
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: 44px;
+      font-size: 55px;
       font-weight: 400;
       line-height: 1.3;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       min-height: 44px;
+      max-width: 100%;
     }
     #academic-homepage .academic-navigation {
       display: flex;
@@ -61,7 +62,7 @@
       display: inline-flex;
       align-items: center;
       min-height: 44px;
-      font-size: 24px;
+      font-size: 30px;
       font-weight: 400;
       text-decoration: none;
       white-space: nowrap;
@@ -80,37 +81,37 @@
     }
     #academic-homepage .academic-home {
       display: grid;
-      grid-template-columns: 500px minmax(0, 1fr);
+      grid-template-columns: 625px minmax(0, 1fr);
       gap: 42px;
       align-items: start;
     }
-    #academic-homepage .academic-profile {
+    #academic-homepage .academic-portrait {
       width: 100%;
-      max-width: 500px;
+      max-width: 625px;
       min-width: 0;
       justify-self: start;
     }
-    #academic-homepage .academic-profile h1,
-    #academic-homepage .academic-profile .academic-affiliation {
-      text-align: center;
+    #academic-homepage .academic-introduction {
+      min-width: 0;
+      text-align: left;
     }
     #academic-homepage .academic-photo {
-      width: 500px;
+      width: 625px;
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto 24px;
+      margin: 0;
     }
     #academic-homepage h1 {
       margin: 0 0 12px;
       font-family: Georgia, 'Times New Roman', serif;
       color: #1d303c;
-      font-size: 48px;
+      font-size: 60px;
       font-weight: 400;
       line-height: 1.25;
     }
     #academic-homepage .academic-affiliation {
-      margin: 0;
+      margin: 0 0 32px;
       font: inherit;
       color: #405969;
     }
@@ -121,7 +122,7 @@
       line-height: 1.65;
     }
     #academic-homepage .academic-biography p { margin: 0; font: inherit; }
-    #academic-homepage .academic-biography p + p { margin-top: 24px; }
+    #academic-homepage .academic-biography p + p { margin-top: 30px; }
     #academic-homepage .academic-page p {
       margin: 16px 0 0;
       font: inherit;
@@ -138,7 +139,7 @@
       flex-wrap: wrap;
       gap: 4px 38px;
     }
-    @media (max-width: 1100px) {
+    @media (max-width: 1350px) {
       #academic-homepage .academic-home {
         grid-template-columns: minmax(0, 1fr);
         gap: 32px;
@@ -175,14 +176,16 @@
 
   <main class="academic-main" aria-live="polite">
     <section class="academic-home" id="home" data-panel="home" aria-label="Homepage">
-      <div class="academic-profile">
+      <div class="academic-portrait">
         <img class="academic-photo" src="./XinweiMa-Photo.jpg" alt="Xinwei Ma" width="576" height="768">
+      </div>
+      <div class="academic-introduction">
         <h1>Xinwei Ma</h1>
         <p class="academic-affiliation">Associate Professor of Economics<br>University of California San Diego</p>
-      </div>
-      <div class="academic-biography">
-        <p>Xinwei Ma is an Associate Professor of Economics at the University of California San Diego. His interdisciplinary research focuses on developing robust statistical methods for causal inference and program evaluation in economics, the social sciences, and biomedical applications.</p>
-        <p>Xinwei earned his Ph.D. in Economics from the University of Michigan in 2019. He previously received a Master of Finance from the University of Hong Kong and a Master of Economics and a Bachelor of Science from Peking University. He serves as an Associate Editor for <em>Econometric Theory</em>, the <em>Journal of Econometrics</em>, and <em>The Econometrics Journal</em>.</p>
+        <div class="academic-biography">
+          <p>Xinwei Ma is an Associate Professor of Economics at the University of California San Diego. His interdisciplinary research focuses on developing robust statistical methods for causal inference and program evaluation in economics, the social sciences, and biomedical applications.</p>
+          <p>Xinwei earned his Ph.D. in Economics from the University of Michigan in 2019. He previously received a Master of Finance from the University of Hong Kong and a Master of Economics and a Bachelor of Science from Peking University. He serves as an Associate Editor for <em>Econometric Theory</em>, the <em>Journal of Econometrics</em>, and <em>The Econometrics Journal</em>.</p>
+        </div>
       </div>
     </section>
     <section class="academic-page" id="research" data-panel="research" aria-label="Research page" hidden>
