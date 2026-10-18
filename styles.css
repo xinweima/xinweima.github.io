@@ -182,7 +182,8 @@ body { margin: 0; background-color: #ffffff; }
 #academic-homepage .academic-research-navigation + .academic-research-section {
   margin-top: 0;
 }
-#academic-homepage .academic-research-section h2 {
+#academic-homepage .academic-research-section h2,
+#academic-homepage .academic-teaching-section h2 {
   margin: 0 0 32px;
   color: #1d303c;
   font-family: Georgia, 'Times New Roman', serif;
@@ -231,24 +232,20 @@ body { margin: 0; background-color: #ffffff; }
 #academic-homepage .academic-teaching-section {
   margin-top: 40px;
 }
-#academic-homepage .academic-teaching-section h2 {
-  margin: 0 0 32px;
-  color: #1d303c;
-  font: inherit;
-  font-weight: 400;
-}
 #academic-homepage .academic-course-list {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-left: 1.55em;
+  font: inherit;
+  list-style-type: decimal;
 }
 #academic-homepage .academic-course-list > li + li {
   margin-top: 42px;
 }
 #academic-homepage .academic-course-title {
   margin: 0;
+  color: var(--academic-blue);
   font: inherit;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
 }
 #academic-homepage .academic-course-terms {
