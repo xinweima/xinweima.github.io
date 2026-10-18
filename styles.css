@@ -279,7 +279,31 @@ body { margin: 0; background-color: #ffffff; }
   font: inherit;
 }
 
-/* Mobile preview: desktop styles above remain unchanged. */
+/* Intermediate sizes for narrower windows and phones in landscape. */
+@media (max-width: 1000px) {
+  #academic-homepage {
+    font-size: 24px;
+  }
+  #academic-homepage .academic-name {
+    font-size: 44px;
+  }
+  #academic-homepage .academic-navigation a,
+  #academic-homepage .academic-footer-link {
+    font-size: 24px;
+  }
+  #academic-homepage h1 {
+    font-size: 48px;
+  }
+  #academic-homepage .academic-research-section h2,
+  #academic-homepage .academic-teaching-section h2 {
+    font-size: 36px;
+  }
+  #academic-homepage .academic-photo {
+    width: 400px;
+  }
+}
+
+/* Compact sizes for mobile screens. */
 @media (max-width: 600px) {
   #academic-homepage {
     font-size: 18px;
@@ -311,6 +335,9 @@ body { margin: 0; background-color: #ffffff; }
   }
   #academic-homepage .academic-home {
     gap: 24px;
+  }
+  #academic-homepage .academic-photo {
+    width: 240px;
   }
   #academic-homepage .academic-email,
   #academic-homepage .academic-affiliation {
