@@ -107,11 +107,10 @@ body { margin: 0; background-color: #ffffff; }
   font: inherit;
 }
 #academic-homepage .academic-email a {
-  color: var(--academic-blue);
+  color: #650020;
   font: inherit;
   overflow-wrap: anywhere;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 #academic-homepage .academic-affiliation {
   margin: 0 0 calc(32px + 1.65em);
