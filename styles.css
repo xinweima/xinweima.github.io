@@ -278,3 +278,70 @@ body { margin: 0; background-color: #ffffff; }
   margin: 8px 0 0;
   font: inherit;
 }
+
+/* Mobile preview: desktop styles above remain unchanged. */
+@media (max-width: 600px) {
+  #academic-homepage {
+    font-size: 18px;
+  }
+  #academic-homepage .academic-name {
+    font-size: 32px;
+  }
+  #academic-homepage .academic-navigation a,
+  #academic-homepage .academic-footer-link {
+    font-size: 18px;
+  }
+  #academic-homepage h1 {
+    font-size: 36px;
+  }
+  #academic-homepage .academic-research-section h2,
+  #academic-homepage .academic-teaching-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  #academic-homepage .academic-header-inner {
+    padding: 14px 18px;
+    gap: 6px;
+  }
+  #academic-homepage .academic-navigation {
+    gap: 0 24px;
+  }
+  #academic-homepage .academic-main {
+    padding: 24px 18px 32px;
+  }
+  #academic-homepage .academic-home {
+    gap: 24px;
+  }
+  #academic-homepage .academic-email,
+  #academic-homepage .academic-affiliation {
+    margin-bottom: 24px;
+  }
+  #academic-homepage .academic-biography p + p {
+    margin-top: 20px;
+  }
+  #academic-homepage .academic-research-navigation {
+    gap: 12px 24px;
+    margin: 20px 0 32px;
+  }
+  #academic-homepage .academic-research-section {
+    margin-top: 36px;
+  }
+  #academic-homepage .academic-teaching-section,
+  #academic-homepage .academic-software-list {
+    margin-top: 28px;
+  }
+  #academic-homepage .academic-paper-list > li + li,
+  #academic-homepage .academic-course-list > li + li,
+  #academic-homepage .academic-software-list > li + li {
+    margin-top: 28px;
+  }
+  #academic-homepage .academic-paper-links {
+    gap: 8px 24px;
+  }
+  #academic-homepage .academic-footer {
+    padding: 12px 18px;
+  }
+  #academic-homepage .academic-footer-inner {
+    gap: 4px 24px;
+  }
+}
