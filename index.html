@@ -13,17 +13,17 @@
 
   <header class="academic-header">
     <div class="academic-header-inner">
-      <a class="academic-name" href="./index.html" data-page="home" aria-current="page">Xinwei Ma</a>
+      <a class="academic-name" href="./index.html" aria-current="page">Xinwei Ma</a>
       <nav class="academic-navigation" aria-label="Main navigation">
         <a href="./research.html">Research</a>
-        <a href="./index.html#software" data-page="software">Software</a>
+        <a href="./software.html">Software</a>
         <a href="./teaching.html">Teaching</a>
       </nav>
     </div>
   </header>
 
-  <main class="academic-main" aria-live="polite">
-    <section class="academic-home" id="home" data-panel="home" aria-label="Homepage">
+  <main class="academic-main">
+    <section class="academic-home" id="home" aria-label="Homepage">
       <div class="academic-portrait">
         <img class="academic-photo" src="./XinweiMa-Photo.jpg" alt="Xinwei Ma" width="576" height="768">
       </div>
@@ -40,10 +40,6 @@
         </div>
       </div>
     </section>
-    <section class="academic-page" id="software" data-panel="software" aria-label="Software page" hidden>
-      <h1>Software</h1>
-      <p>Software projects and links will be added soon.</p>
-    </section>
   </main>
 
   <footer class="academic-footer">
@@ -56,30 +52,15 @@
 </div>
 <script>
   (function () {
-    const root = document.getElementById('academic-homepage');
-    const links = Array.from(root.querySelectorAll('a[data-page]'));
-    const panels = Array.from(root.querySelectorAll('[data-panel]'));
-    const titles = { home: 'Home', software: 'Software' };
-
-    function showPage() {
+    function redirectLegacyPage() {
       const requested = window.location.hash.slice(1);
-      if (requested === 'research' || requested === 'teaching') {
+      if (requested === 'research' || requested === 'software' || requested === 'teaching') {
         window.location.replace('./' + requested + '.html');
-        return;
       }
-      const page = Object.prototype.hasOwnProperty.call(titles, requested) ? requested : 'home';
-      panels.forEach(function (panel) {
-        panel.hidden = panel.dataset.panel !== page;
-      });
-      links.forEach(function (link) {
-        if (link.dataset.page === page) link.setAttribute('aria-current', 'page');
-        else link.removeAttribute('aria-current');
-      });
-      document.title = page === 'home' ? 'Xinwei Ma | Economics' : titles[page] + ' | Xinwei Ma';
     }
 
-    window.addEventListener('hashchange', showPage);
-    showPage();
+    window.addEventListener('hashchange', redirectLegacyPage);
+    redirectLegacyPage();
   })();
 </script>
 </body>
