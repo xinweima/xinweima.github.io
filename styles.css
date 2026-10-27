@@ -280,7 +280,7 @@ body { margin: 0; background-color: #ffffff; }
 }
 
 /* Page-specific typography at desktop widths. */
-@media (width > 1000px) {
+@media (width > 1150px) {
   #academic-homepage .academic-portrait {
     max-width: 340px;
   }
@@ -319,7 +319,7 @@ body { margin: 0; background-color: #ffffff; }
 }
 
 /* Intermediate sizes for narrower windows and phones in landscape. */
-@media (600px < width <= 1000px) {
+@media (600px < width <= 1150px) {
   #academic-homepage {
     font-size: 17px;
   }
